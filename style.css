@@ -81,3 +81,64 @@ h1 h2 h3{
     color: #0065fc;
     font-weight: 700;
 }
+
+.navigation .active_link{
+    color: #0065fc;
+}
+
+/*-- Section 1 --*/
+
+.title_h1{
+    font-size: 26px;
+    margin-left: auto;
+    margin-top: 3.5%;
+    margin-bottom: -5px;
+}
+
+.subtitle{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.search_box{
+    display: inline-flex;
+    flex-direction: row;
+    margin-bottom: 28px;
+}
+
+.icon_location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 12px 0 0 12px;
+}
+
+.search_box{
+    padding: 0 0 0 45px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    border-top: solid 1px #f2f2f2;
+    border-bottom: solid 1px #f2f2f2;
+ 
+}
+
+.search_bar{
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#search_button{
+    border: none;
+    border-radius: 0 12px 12px 0;
+    background-color: #0065fc;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+    cursor: pointer;
+}

@@ -42,16 +42,20 @@ ul{
 
 #logo{
     float: left;
-    margin-top: 20px;
+    display: inline;
+    margin-top: 9px;
 }
 .navigation{
     display: flex;
     justify-content: flex-end;
+    margin-top: 15px;
+    margin-right: 95px;
 }
 
 .nav_link{
+    display: inline;
+    align-items: center;
     margin-left: 67px;
-    padding-top: 25px;
     list-style-type: none;
 }
 
@@ -61,7 +65,7 @@ ul{
     background: white;
 }
   
-.navigation #nav_link_accomodation > .line_effect {
+#nav_link_accomodation > .line_effect {
     background: #0065fc;
 }
   
@@ -82,7 +86,7 @@ ul{
     border-top: 3px solid #0065fc;
 }
 
-#nav-link_accomodation a{
+#nav_link_accomodation a{
     color: #0065fc;
 }
 
@@ -127,15 +131,16 @@ ul{
 #icon_location{
     display: flex;
     align-items: center;
-    width: 30%;
     height: auto;
     background-color: #f2f2f2;
     border-radius: 12px 0 0 12px;
 }
 
 .fa-map-marker-alt{
-    width: 50px;
-    font-size: 17px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #000;
 }
 
 .search_box{
@@ -233,42 +238,40 @@ ul{
 /*-- Section 2 --*/
 .blocs{
     display: inline-flex;
+    margin-top: 25px;
 }
 
 /*----- Accomodation -----*/
 
 .bloc_accomodation{
+    display: flex;
     background: #f2f2f2;
     border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 15px;
+    padding: 0 5px;
     width: 880px;
     height: 625px;
 }
 
 .bloc_accomodation .h2_housing_marseille{
-    display: block;
+    display: inline-block;
     width: 100%;
     margin-left: 15px;
 }
 
 .housing_marseille{
     display: flex;
-    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .items_marseille{
     display: flex;
     flex-direction: column;
-    align-content: center;
     border: solid 5px transparent;
     border-radius: 20px;
     background: white;
     box-shadow: 0px 4px 5px 0 #e2e2e2;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    width: 250px;
+    height: 200px;
 }
 
 .items_marseille:hover{
@@ -309,6 +312,7 @@ ul{
     font-size: 80%;
 }
 
+
 .show_more{
     font-size: 1.1em;
     font-weight: 800;
@@ -328,22 +332,25 @@ ul{
     margin-left: 40px;
 }
 .bloc_most_popular .title-h2_icon{
-    display: flex;
-    width: 100%;
-    margin-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 25px;
+    line-height: 2px;
 }
 
 .fa-chart-line{
     color: black;
     font-size: 140%;
-    display: inline-block;
+    display: inline-flex;
 
 }
 .most_populars{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 .most_popular{
@@ -353,9 +360,10 @@ ul{
     border: solid 5px transparent;
     border-radius: 20px;
     background: white;
+    width: 345px;
+    height: 145px;
     box-shadow: 0px 5px 5px 0 #e2e2e2;
-    margin-right: auto;
-    margin-bottom: 30px;
+    margin: auto 25px 25px -10px;
 }
 
 .most_popular:hover{
@@ -366,7 +374,7 @@ ul{
 
 .most_popular > .most_popular_img{
     width: 128px;
-    height: 135px;
+    height: 145px;
     background-size: 100% 100%;
     border-radius: 15px 0 0 15px;
 }
@@ -379,6 +387,90 @@ ul{
     object-fit: cover;
 }
 
-.hotel_name{
-    flex-wrap: wrap;
+.most_popular p{
+    margin-left: 15px; 
 }
+
+.most_popular h3{
+    padding-left: 15px;
+    margin-right: 22px;
+}
+
+
+/*-- Activities --*/
+.activities_marseille ul{
+    display: grid;
+    width: 1340px;
+    height: 550px;
+    margin-bottom: 75px;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    grid-gap: 25px;
+}
+
+.activities_marseille .items_activity{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 2px 2px 15px -5px lightgrey;
+}
+
+.activities_marseille .items_activity:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: ease 0.5s;
+}
+  
+.activity_img{
+    object-fit: cover;
+    width: 100%;
+    height: 95%;
+    border-radius: 20px;
+    margin: 0;
+    
+}
+
+.title_activity{
+    position: absolute;
+    width: 95%;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 0 20px 5%;
+    margin: 0;
+    bottom: 0;
+}
+
+.activity_1 {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+}
+
+.activity_2{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.activity_3{
+    grid-column: 2;
+    grid-row: 3 / span 2;
+}
+
+.activity_4{
+    grid-column: 3;
+    grid-row: 1 / span 4;
+}
+
+.activity_6{
+    grid-column: 4;
+    grid-row: 3 / span 2;
+}
+
+.activity_5{
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+
+/*-- Footer --*/

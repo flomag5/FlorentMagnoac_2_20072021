@@ -202,7 +202,8 @@ ul{
 .filters ul li:hover {
     cursor: pointer;
     background: #0065fc;
-    transition-duration: 0.40s;
+    color: white;
+    transition: 0.50s ease-out;
 }
 
 .icon_filter{
@@ -239,28 +240,37 @@ ul{
 .blocs{
     display: inline-flex;
     margin-top: 25px;
+    width: 1340px;
 }
 
 /*----- Accomodation -----*/
 
 .bloc_accomodation{
-    display: flex;
+    display: grid;
     background: #f2f2f2;
     border-radius: 25px;
     padding: 0 5px;
     width: 880px;
     height: 625px;
+    
 }
 
 .bloc_accomodation .h2_housing_marseille{
-    display: inline-block;
+    display: inline-flex;
     width: 100%;
-    margin-left: 15px;
+    padding-top: 15px;
+    margin-left: 40px;
 }
 
 .housing_marseille{
-    display: flex;
-    justify-content: space-between;
+    width: 880px;
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    grid-template-rows: 1fr 1fr;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1px;
+    margin-top: -15px;
 }
 
 .items_marseille{
@@ -270,8 +280,8 @@ ul{
     border-radius: 20px;
     background: white;
     box-shadow: 0px 4px 5px 0 #e2e2e2;
-    width: 250px;
-    height: 200px;
+    width: 240px;
+    height: 200px;   
 }
 
 .items_marseille:hover{
@@ -281,7 +291,7 @@ ul{
 }
 
 .items_marseille > .items_marseille_img{
-    width: 250px;
+    width: 240px;
     height: 115px;
     background-size: 100% 100%;
     border-radius: 20px 20px 0 0;
@@ -316,7 +326,7 @@ ul{
 .show_more{
     font-size: 1.1em;
     font-weight: 800;
-    align-self: flex-start;
+    padding-left: 40px;
 }
 
 /*----- Most popular -----*/
@@ -398,22 +408,35 @@ ul{
 
 
 /*-- Activities --*/
+.activities_marseille .title_h2{
+    margin-top: 50px;
+    margin-bottom: 8px;
+}
 .activities_marseille ul{
     display: grid;
+    justify-content: center;
     width: 1340px;
-    height: 550px;
-    margin-bottom: 75px;
+    height: 450px;
+    margin-bottom: 55px;
+    margin-top: 8px;
+    margin-left: -55px;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 25%);
-    grid-gap: 25px;
+    grid-template-rows: 3fr 0.3fr 0.3fr 0.3fr 0.3fr 3fr;
+    grid-gap: 15px;
+    grid-template-areas: 
+    "activity_1 activity_2 activity_4 activity_5"
+    "activity_1 activity_2 activity_4 activity_5"
+    "activity_1 activity_2 activity_4 activity_6"
+    "activity_1 activity_2 activity_4 activity_6"
+    "activity_1 activity_3 activity_4 activity_6"
+    "activity_1 activity_3 activity_4 activity_6";
 }
 
 .activities_marseille .items_activity{
     position: relative;
-    width: 100%;
+    width: 305px;
     height: 100%;
     border-radius: 20px;
-    background: white;
     box-shadow: 2px 2px 15px -5px lightgrey;
 }
 
@@ -435,6 +458,7 @@ ul{
 .title_activity{
     position: absolute;
     width: 95%;
+    font-size: 1.0;
     background-color: white;
     border-radius: 0 0 20px 20px;
     padding: 20px 0 20px 5%;
@@ -443,34 +467,56 @@ ul{
 }
 
 .activity_1 {
-    grid-column: 1;
-    grid-row: 1 / span 4;
-}
-
-.activity_2{
-    grid-column: 2;
-    grid-row: 1 / span 2;
-}
-
-.activity_3{
-    grid-column: 2;
-    grid-row: 3 / span 2;
-}
-
-.activity_4{
-    grid-column: 3;
-    grid-row: 1 / span 4;
-}
-
-.activity_6{
-    grid-column: 4;
-    grid-row: 3 / span 2;
-}
-
-.activity_5{
-    grid-column: 4;
-    grid-row: 1 / span 2;
-}
-
+    grid-area: activity_1;
+  }
+.activity_2 {
+    grid-area: activity_2;  
+  }
+.activity_3 {
+    grid-area: activity_3;
+  }
+.activity_4 {
+    grid-area: activity_4;
+  }
+.activity_5 {
+    grid-area: activity_5;
+  }
+.activity_6 {
+    grid-area: activity_6;
+  }
+  
 
 /*-- Footer --*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    width: 100%;
+}
+
+.bloc_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.foot_link:hover{
+    text-decoration: underline;
+}
+
+.bloc_footer p{
+    line-height: 14px;
+}
+
+.about .housings .assistance{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.assistance{
+    margin-right: 25%;
+}

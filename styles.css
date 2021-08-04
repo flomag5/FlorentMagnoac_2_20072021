@@ -16,7 +16,7 @@ body{
 }
 
 .header .main{
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 a{
@@ -43,6 +43,10 @@ ul{
 
 .price{
     font-weight: 700;
+}
+
+#icon_glass{
+    display: none;
 }
 
 /* Header */
@@ -384,7 +388,7 @@ ul #nav_link_accomodation > .line_effect {
     display: inline-flex;
 
 }
-.most_populars{
+.most-populars{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -572,12 +576,31 @@ ul #nav_link_accomodation > .line_effect {
     }
 
     .bloc_most_popular{
-        display: flex;
+        display: block;
         max-width: 95%;
         max-height: 315px;
-        margin-left: 15px;
+        margin-left: 10px;
+    }
+   
+    .most-populars{
+        display: flex;
     }
 
+    .most-populars ul{
+        display: inline-flex;
+        justify-content: space-evenly;
+    }
+
+    .most_popular{
+        width: auto;
+        height: auto;
+    }
+
+    .most_popular .most_popular_img{
+        min-height: 100%;
+    }
+
+   
     .bloc_accomodation{
       max-width: 97%;
     }
@@ -615,7 +638,6 @@ ul #nav_link_accomodation > .line_effect {
         grid-template-areas: 
         "activity_1 activity_2 activity_4"
         "activity_5 activity_3 activity_6";
-        margin-bottom: 200px;
     }
 
     .items_activity {
@@ -656,11 +678,15 @@ ul #nav_link_accomodation > .line_effect {
     padding-left: 2%;
 }   
 
-
+@media screen and (max-width: 1200px) {
+    main {
+      width: 95%;
+    }
+}
 
 @media screen and (max-width: 900px) {
     main {
-      width: 90%;
+      width: 92%;
     }
     .info{
         margin-bottom: 5%;
@@ -668,8 +694,9 @@ ul #nav_link_accomodation > .line_effect {
 
     }
     .bloc_accomodation{
-        width: 103%;
+        width: 97%;
         height: 80%;
+        margin-left: 0.8%;
     
     }
     
@@ -677,25 +704,25 @@ ul #nav_link_accomodation > .line_effect {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        padding-left: 6%;
     }
 
     .items_marseille{
         width: 95%;
         height: auto;
-        margin-left: 0;
+        margin-left: -25px;
     }
 
 
     .bloc_most_popular{
         display: flex;
-        width: 100%;
+        width: 96%;
         height: 560px;
+        margin-right: 1%;
     }
 
     .bloc_most_popular .most-populars ul{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        display: inline-flex;
     }
 
     .bloc_most_popular .most-populars .most_popular{
@@ -710,16 +737,19 @@ ul #nav_link_accomodation > .line_effect {
          "activity_1 activity_2"
          "activity_4 activity_3"
          "activity_5 activity_6";
-         width: 100%;
-         justify-items: center;
+        width: 35%;
+        margin-left: 30%;
      }
+    .items_activity{
+        margin-right: 2%;
     }
 
-@media screen and (max-width: 576px){
+
+@media screen and (max-width: 600px){
 
     .container{
         width: 100%;
-        margin-left: 15px; 
+        padding-left: 10px;
     }
     .navigation{
         display: grid;
@@ -728,27 +758,32 @@ ul #nav_link_accomodation > .line_effect {
         grid-template-areas: 
         "logo nav_link_sign-up"
         "nav_link_accomodation nav_link_activities";
+        margin-bottom: -30%;
     }
+   
     .navigation ul{
-        display: inline-block;
+        flex-direction: column-reverse;
     }
-
    .navigation img{
         grid-area: logo;
+        padding: 15px;
+        margin-top: -50px;
     }
 
     .navigation #nav_link_accomodation{
-        flex-direction: column-reverse;
+        display: flex;
         grid-area: nav_link_accomodation;
+    }
+    #nav_link_accomodation{
+        margin-right: 300%;
     }
 
     .navigation #nav_link_activities{
-        flex-direction: column;
+        flex-direction: column-reverse;
         grid-area: nav_link_activities;
     }
     .navigation #nav_link_activities .line_effect{
         border-bottom:3px solid #dbdbdb;
-
     }
 
     .navigation #nav_link_sign-up{
@@ -769,7 +804,6 @@ ul #nav_link_accomodation > .line_effect {
         margin-left: 55px;
     }
     .search_bar{
-
         width: 280px;
         height: 48px;
     }
@@ -810,18 +844,34 @@ ul #nav_link_accomodation > .line_effect {
 
     .bloc_most_popular{
         display: flex;
-        margin: 10px auto 0 10px;
-        max-width: 500px;
-        height: 100%;
+        flex-direction: column;
         border-radius: 0;
+        margin-top: 30%;
     }
+
+    .most-populars ul{
+        flex-direction: column;
+        height: 70%;
+        width: 85%;
+    }
+
+    .title-h2_icon{
+        margin-bottom: 5%;
+    }
+
+    .most_popular{
+        width: 100%;
+    }
+
+
     .bloc_accomodation{
         max-width: 420px;
         height: 80%;
         background-color: #fff;
         border-radius: 0;
-        margin-left: -15px;
-        margin-top: -140px;
+        margin-left: 2%;
+        margin-top: 10%;
+        
     
     }
     .housing_marseille{
@@ -832,18 +882,23 @@ ul #nav_link_accomodation > .line_effect {
     }
 
     .items_marseille{
-        width: 335px;
+        width: 85%;
         height: auto;
     }
     .housing_marseille .items_marseille_img{
-        width: 335px;
+        width: 100%;
+    }
+
+    .activities_marseille{
+        margin-bottom: -110%;
     }
     .activities_marseille ul{
         display: grid;
         justify-content: center;
-        width: 100%;
-        height: 1500px;
-        margin-bottom: 80px;
+        width: 90%;
+        height: auto;
+        margin-left: -15px;
+        margin-top: 10%;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas: 
@@ -854,14 +909,12 @@ ul #nav_link_accomodation > .line_effect {
         "activity_5"
         "activity_6";
     }
-    
-    .activity_2{
-        grid-area: activity_2;
-        height: 250px;
+
+    .activities_marseille ul li{
+        height: 90%;
+        margin-bottom: -25%;
     }
-    .activity_6{
-        grid-area: activity_6;
-        height: 250px;
+  
     }
     .footer{
         display: flex;

@@ -749,6 +749,7 @@ ul #nav_link_accomodation > .line_effect {
 
     .container{
         width: 100%;
+        height: auto;
         padding-left: 10px;
     }
     .navigation{
@@ -845,22 +846,26 @@ ul #nav_link_accomodation > .line_effect {
     .bloc_most_popular{
         display: flex;
         flex-direction: column;
+        background: none;
         border-radius: 0;
-        margin-top: 30%;
+        margin-top: 25%;
+        margin-left: -3%;
+        margin-bottom: 32%;
     }
 
     .most-populars ul{
         flex-direction: column;
-        height: 70%;
-        width: 85%;
+        height: 50%;
+        width: 98%;
     }
 
     .title-h2_icon{
-        margin-bottom: 5%;
+        margin-bottom: 7%;
     }
 
     .most_popular{
-        width: 100%;
+        width: 90%;
+        height: 70%;
     }
 
 
@@ -869,7 +874,7 @@ ul #nav_link_accomodation > .line_effect {
         height: 80%;
         background-color: #fff;
         border-radius: 0;
-        margin-left: 2%;
+        margin-left: -5%;
         margin-top: 10%;
         
     
@@ -882,8 +887,7 @@ ul #nav_link_accomodation > .line_effect {
     }
 
     .items_marseille{
-        width: 85%;
-        height: auto;
+        width: 110%;
     }
     .housing_marseille .items_marseille_img{
         width: 100%;
@@ -891,6 +895,7 @@ ul #nav_link_accomodation > .line_effect {
 
     .activities_marseille{
         margin-bottom: -110%;
+        margin-top: -83%;
     }
     .activities_marseille ul{
         display: grid;

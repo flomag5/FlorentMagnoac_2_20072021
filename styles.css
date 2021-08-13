@@ -15,7 +15,6 @@ html, body {
 }
 
 .container{
-    min-width: (100%, 1440px);
     margin: auto;
 }
 
@@ -56,50 +55,39 @@ header{
     min-width: 375px;
     margin: auto auto auto 1.5em;
 }
+
 .navigation{
     display: flex;
     justify-content: space-between;
-    margin-top: 2em;
+    align-items: center;
 }
 
-.navigation ul{
-    display: grid;
-    justify-content: center;
-    margin-right: -3%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "nav_link_accomodation nav_link_activities nav_link_sign-up";  
-}
-
-#nav_link_accomodation{
-    grid-area: nav_link_accomodation;
-}
-#nav_link_activities{
-    grid-area: nav_link_activities;
-}
 .navigation #nav_link_sign-up{
     color: #0065fc;
     font-weight: 700;
-    margin-left: -25px;
 }
 
 #logo{
-    margin-left: -1%;
-    padding: 0;
-    grid-area: logo;
+    display: flex;
+    width: 65%;
+    margin-left: -3%; 
+    padding-top: 30px; 
+    padding-bottom: 0;
 }
-
-.nav_link .line_effect{
+.nav_link{
+    padding-top: 20px;
+}
+.nav_link a{
     width: 100%;
     height: 3px;
     background: white;
 }
   
-ul #nav_link_accomodation > .line_effect {
+#nav_link_accomodation{
     color: #0065fc;
 }
   
-.nav_link #nav_link_activities:hover > .line-effect {
+.nav_link #nav_link_activities:hover{
     background: #0065fc;
 }
 
@@ -110,10 +98,10 @@ ul #nav_link_accomodation > .line_effect {
 .navigation a {
     color: black;
     text-decoration: none;
-    padding: 2.87rem 15px;
-    margin-left: 50px;
+    padding: 35px;
+   
 }
-.navigation a:hover{
+.navigation #nav_link_accomodation a:hover, #nav_link_activities a:hover{
     color: #0065fc;
 }
 .navigation a:visited {
@@ -124,7 +112,7 @@ ul #nav_link_accomodation > .line_effect {
     border-top: 3px solid #0065fc;
 }
 
-#nav_link_activities #nav_link_accomodation a{
+#nav_link_activities, #nav_link_accomodation a{
     color: black;
 }
 #nav_link_activities #nav_link_accomodation a:hover{
@@ -221,7 +209,7 @@ ul #nav_link_accomodation > .line_effect {
 
 .filters ul li{
     display: inline-flex;
-    margin-left: 25px;
+    margin-left: 20px;
     font-size: 19px;
     font-weight: 700;
     align-items: center;
@@ -264,7 +252,7 @@ ul #nav_link_accomodation > .line_effect {
 }
 
 .info p{
-    display: inline-flex;
+    display: inline;
     margin-left: 10px;
 }
 
@@ -361,6 +349,7 @@ ul #nav_link_accomodation > .line_effect {
 
 /*----- Most popular -----*/
 .bloc_most_popular{
+    display: flex;
     background: #f2f2f2;
     border-radius: 25px;
     justify-content: center;
@@ -513,6 +502,7 @@ ul #nav_link_accomodation > .line_effect {
     align-items: center;
     background: #f2f2f2;
     width: 100%;
+    
 }
 
 .bloc_footer{
@@ -546,7 +536,6 @@ ul #nav_link_accomodation > .line_effect {
 @media screen and (max-width: 1440px){
     .container{
         display: block;
-        width: 97%;
     }
     header, .hero{
         margin-left: 2%;
@@ -555,8 +544,9 @@ ul #nav_link_accomodation > .line_effect {
         width: 97%;
     }
     #logo{
-        margin-left: 1%;
+       margin-left: -2%;
     }
+    
     .blocs{
         display: grid;
         grid-template-columns: 1fr;
@@ -674,22 +664,37 @@ ul #nav_link_accomodation > .line_effect {
 }  
 
 @media screen and (max-width: 1200px) {
-    main {
-      width: 96%;
-    }
-    .filters_ul{
+   
+    #logo{
         margin-left: -3%;
+    }
+  
+    .filters ul li{
+        margin-left: 12px;
     }
     .activities_marseille{
         margin-bottom: 9em;
     }
+    .footer{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 900px) {
-    main {
-      width: 94%;
+    
+    #logo{
+        margin-left: -4%;
     }
-   
+
+    .title_h1{
+        font-size: 23px;
+    }
+    .search_box{
+        margin-left: 1%;
+    }
+    .filters_ul{
+        margin-left: -2%;
+    }
     .bloc_accomodation{
         height: 52%;
         width: 96%;
@@ -712,7 +717,9 @@ ul #nav_link_accomodation > .line_effect {
         display: block;
         height: 100%;
     }
-
+    .most-populars .title-h2_icon{
+        width: 92%;
+    }
     .bloc_most_popular .most-populars ul{
         display: block; 
     }
@@ -737,11 +744,11 @@ ul #nav_link_accomodation > .line_effect {
          "activity_1 activity_2"
          "activity_4 activity_3"
          "activity_5 activity_6";
-        width: 102%;
+        width: 100%;
         
      }
     .items_activity{
-        width: 102%;
+        width: 100%;
         margin-left: -5%;
     }
     .bloc_footer{
@@ -754,45 +761,42 @@ ul #nav_link_accomodation > .line_effect {
 }
 
 @media screen and (max-width: 620px){
-    .main{
-        width: 92%;
-    }
     
-    .navigation{
-        margin-bottom: 7%;
+    #logo{
+        width: 45%;
+        margin-left: -5%;
     }
- 
-    .navigation ul{
-        display: grid;
-        width: 90%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        " .  nav_link_sign-up"
-        "nav_link_accomodation nav_link_activities";  
+    .navigation{
+        flex-wrap: wrap;
+    }
+    #nav_link_accomodation, #nav_link_activities{
+        padding-top: 0px;
+        margin-bottom: 25px;
     }
     #nav_link_sign-up{
-        grid-area: nav_link_sign-up;
-        padding-left: 55px;
+        padding-top: 30px;
     }
-    .navigation a {
-        padding: 0.95rem 0;
+    
+    .navigation #nav_link_activities{
+        order: 3; 
+        display: flex; 
+        width: 50%;  
+        text-align: center;
+    }
+    .navigation #nav_link_accomodation{
+        order: 2; 
+        display: flex;
+        width: 50%;  
+        text-align: center;
     }
    
-    .navigation #nav_link_accomodation{
-        grid-area: nav_link_accomodation;
-        margin-top: 9%;
-        margin-right: 4rem;
-        margin-left: -10em;
-    }
-    #nav_link_activities{
-        grid-area: nav_link_activities;
-        margin-top: 9%;
-    }
     .nav_link a:hover{
         border-top: hidden;
+    }
+    #nav_link_accomodation:hover, #nav_link_activities:hover{
         border-bottom: 3px solid #0065fc;
     }
+
     .title_h1{
         font-size: 21px;
         margin: 0 15% 0 0;
@@ -801,7 +805,7 @@ ul #nav_link_accomodation > .line_effect {
         margin-left: 0;
     }
     .search_box{
-        width: 98%;
+       
         height: 48px;
         margin-left: 0.2em;
         margin-top: 4%;
@@ -835,22 +839,20 @@ ul #nav_link_accomodation > .line_effect {
         display: flex;
         align-items: top;
         margin-top: 15px;
-        margin-right: -6%;
     }
     
     .info p{
-        display: flex;
         font-size: 1em;
-        margin: 7px auto auto 10px;
+        margin: 7px -0 auto 10px;
     }
     .info .fa-info{
         font-size: 80%;
-        padding: 9px;   
+        padding: 8px;   
         height: 10px; 
     }
 
     .bloc_most_popular{
-        width: 108%;
+        width: 100%;
         margin-left: -1.2rem;
         border-radius: 0;
     }
@@ -923,53 +925,63 @@ ul #nav_link_accomodation > .line_effect {
 }
 
 @media screen and (max-width: 440px){
-    body{
-        margin-left: 0;
+    
+    #logo{
+        margin-left: -8%;
     }
-    .main{
-        margin-left: -2%;
+
+    .filters ul li{
+        padding: 0 15px 0 0;
+        font-size: 15px; 
+        margin-left: 2%;
     }
-    .navigation ul{
+
+    .info p{
         width: 80%;
     }
-    #nav_link_sign-up{
-        padding: 0;
-        margin-left: -15px;
-    }
-    #nav_link_accomodation{
-        margin-left: -25px;
-        padding-top: 4px;
-    }
-    #nav_link_activities{
-       margin-left: -60px;
-       padding-top: 6px;
-        
-    }
     .bloc_most_popular{
-        width: 97%;
         border-radius: 0;
     }
     .most-populars .title-h2_icon{
+        display: inline-flex;
         font-size: 0.9em;
-        justify-content: left;
     }
     .most-populars h2{
-        padding-right: 30%;
+        padding-right: 31%;
     }
-    .most-populars ul{
-        display: flex;
-        flex-direction: column;
-        max-width: 82%;
+    .most_popular{
+        width: 78%;
     }
    
     .bloc_accomodation{
         margin-top: -20%;
+        margin-left: 7%;
     }
     .items_marseille{
         width: 90%;
     }
     .show_more{
         padding-left: 2%;
+    } 
+    .activities_marseille{
+        width: 91%;
     }
-   
+}
+
+@media screen and (max-width: 375px){
+    .search_box{
+        width: 88% ;
+    }
+    .most-populars ul{
+        width: 82%;
+    }
+    .items_marseille{
+        width: 85%;
+    }
+    .activities_marseille{
+        width: 86%;
+    }
+    .most-populars .title-h2_icon{
+        justify-content: left;
+    }
 }

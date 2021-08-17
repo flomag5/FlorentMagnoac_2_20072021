@@ -242,7 +242,7 @@ header{
 .fa-info{
     background: white;
     color: #0065fc;
-    size: 3px;
+
     padding: 7px; 
     text-align: center; 
     border: solid 1px #d9d9d9;   
@@ -467,7 +467,7 @@ header{
 .title_activity{
     position: absolute;
     width: 95%;
-    font-size: 1.0;
+    font-size: 1.0em;
     background-color: white;
     border-radius: 0 0 20px 20px;
     padding: 20px 0 20px 5%;
@@ -562,29 +562,30 @@ header{
     .blocs .bloc_most_popular{
         grid-area: bloc_most_popular;
     }
+
     .bloc_most_popular{
+        display: grid;
         width: 92%;
         height: 100%;
         margin-top: 1.5%;
     }
-    .most-populars .title-h2_icon{
-        width: 97%;
-    }
-    
     .most-populars ul{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
     }
-
+    .title-h2_icon .fa-chart-line{
+        margin-right: -5%;
+    }
     .most_popular{
-        min-width: 93%;
         height: 80%;
     }
 
     .most_popular > .most_popular_img{
         height: auto;
     }
-    
+
+  
     .bloc_accomodation{
       width: 95%;
       margin-left: 1.5em;
@@ -673,6 +674,7 @@ header{
         margin-left: 12px;
     }
     .activities_marseille{
+        width: 99%;
         margin-bottom: 9em;
     }
     .footer{
@@ -718,12 +720,14 @@ header{
         height: 100%;
     }
     .most-populars .title-h2_icon{
-        width: 92%;
+        width: 87%;
     }
     .bloc_most_popular .most-populars ul{
         display: block; 
     }
-
+    .most_popular{
+        width: 95%;
+    }
     .most_pop li{
         height: 150px;
     }
@@ -753,14 +757,18 @@ header{
     }
     .bloc_footer{
         margin-left: 3%;
+        width: 100%;
     }
     .housings{
-        padding-left: 5em;
+        padding-left: 4em;
         margin-right: 4em;
+    }
+    .assistance{
+        margin-right: 15%;
     }
 }
 
-@media screen and (max-width: 620px){
+@media screen and (max-width: 640px){
     
     #logo{
         width: 45%;
@@ -837,18 +845,16 @@ header{
 
     .info{
         display: flex;
-        align-items: top;
         margin-top: 15px;
     }
     
     .info p{
         font-size: 1em;
-        margin: 7px -0 auto 10px;
+        margin: 5px -0 auto 10px;
     }
     .info .fa-info{
         font-size: 80%;
-        padding: 8px;   
-        height: 10px; 
+        padding-top: 8px;
     }
 
     .bloc_most_popular{
@@ -862,10 +868,12 @@ header{
     .most-populars ul{
         display: flex;
         flex-direction: column;
-        width: 90%;
     }
     .most-populars ul li{
         height: 200px;
+    }
+    .most_popular{
+        width: 96%;
     }
 
     .bloc_accomodation{
@@ -874,7 +882,7 @@ header{
         margin-top: -15%;
     }
     .bloc_accomodation .h2_housing_marseille{
-        margin-left: -1.5%;
+        margin-left: 1%;
     }
     .housing_marseille{
         display: grid;
@@ -884,7 +892,7 @@ header{
     }
 
     .items_marseille{
-        width: 100%;
+        width: 99%;
     }
     .housing_marseille .items_marseille_img{
         width: 100%;
@@ -892,7 +900,7 @@ header{
 
     .activities_marseille{
         width: 100%;
-        margin-left: 2%;
+        margin-left: 3%;
         margin-top: -36rem;
         margin-bottom: -32rem;
     }
@@ -924,15 +932,15 @@ header{
     }
 }
 
-@media screen and (max-width: 440px){
+@media screen and (max-width: 460px){
     
     #logo{
         margin-left: -8%;
     }
 
     .filters ul li{
-        padding: 0 15px 0 0;
-        font-size: 15px; 
+        padding: 0 14px 0 0;
+        font-size: 16px; 
         margin-left: 2%;
     }
 
@@ -942,44 +950,53 @@ header{
     .bloc_most_popular{
         border-radius: 0;
     }
+   
     .most-populars .title-h2_icon{
-        display: inline-flex;
+        display: flex;
         font-size: 0.9em;
     }
-    .most-populars h2{
-        padding-right: 31%;
+    .most-populars .fa-chart-line{
+        margin-right: 2%;
     }
     .most_popular{
-        width: 78%;
+        width: 94%;
     }
    
     .bloc_accomodation{
         margin-top: -20%;
-        margin-left: 7%;
     }
     .items_marseille{
-        width: 90%;
+        width: 94%;
+        margin-left: -18px;
     }
     .show_more{
         padding-left: 2%;
     } 
     .activities_marseille{
-        width: 91%;
+        width: 96%;  
+    }
+    .activities_marseille ul{
+        margin-left: -7px;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 385px){
     .search_box{
-        width: 88% ;
+        width: 85% ;
     }
     .most-populars ul{
         width: 82%;
+       
+    }
+    .most-populars h2{
+        padding-right: 29%;
     }
     .items_marseille{
         width: 85%;
+       
     }
     .activities_marseille{
-        width: 86%;
+        width: 87%;
     }
     .most-populars .title-h2_icon{
         justify-content: left;
